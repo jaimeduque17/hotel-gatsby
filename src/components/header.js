@@ -1,5 +1,6 @@
 import React from 'react'
 import {css} from '@emotion/core'
+import Navigation from './nav'
 
 const Header = () => {
     return ( 
@@ -23,9 +24,10 @@ const Header = () => {
                     color: #FFF;
                     text-align: center;
                 `}>Gatsby Hotel</h1>
+                <Navigation />
             </div>
         </header>
-     );
+    )
 }
  
 export default Header
