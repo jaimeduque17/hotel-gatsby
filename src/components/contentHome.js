@@ -19,11 +19,17 @@ const ContentHome = () => {
         }
     `)
 
-    console.log(information)
+    // console.log(information.allDatoCmsPage.nodes[0])
+
+    const { title, content, image } = information.allDatoCmsPage.nodes[0]
 
     return (
         <>
-            <h2>Title</h2>
+            <h2>{title}</h2>
+            <div>
+                <p>{content}</p>
+                <img src={image.fluid.src} alt="" />
+            </div>
         </>
     )
 }
