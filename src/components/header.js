@@ -1,9 +1,17 @@
 import React from 'react'
-import {css} from '@emotion/core'
+import { css } from '@emotion/core'
+import styled from '@emotion/styled'
+import { Link } from 'gatsby'
 import Navigation from './nav'
 
+const HomeLink = styled(Link)`
+    color: #FFF;
+    text-align: center; 
+    text-decoration: none;
+`
+
 const Header = () => {
-    return ( 
+    return (
         <header
             css={css`
                 background-color: #222;
@@ -20,14 +28,15 @@ const Header = () => {
                     justify-content: space-between;
                 }
             `}>
-                <h1 css={css`
-                    color: #FFF;
-                    text-align: center;
-                `}>Gatsby Hotel</h1>
+                <HomeLink
+                    to='/'
+                >
+                    <h1>Gatsby Hotel</h1>
+                </HomeLink>
                 <Navigation />
             </div>
         </header>
     )
 }
- 
+
 export default Header
