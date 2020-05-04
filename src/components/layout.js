@@ -9,7 +9,7 @@ const Layout = (props) => {
 
     const seo = UseSeo()
 
-    const { siteName, fallbackSeo: { description, title } } = seo
+    const { fallbackSeo: { description, title } } = seo
 
     return (
         <>
